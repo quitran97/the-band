@@ -1,0 +1,515 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+/* 1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Hình dáng */
+
+/* 1. Từ trên xuống dưới
+2. Từ ngoài vào trong
+3. Từ tổng quan đến chi tiết */
+
+/* Common */
+
+.text-white{
+    color: #fff !important;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding: 0 8px;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-third{
+    width: 33.33333%;
+}
+
+.col-full{
+    width: 100%;
+}
+.text-center{
+    text-align: center !important;
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+
+#main{
+
+}
+.clear{
+    clear: both;
+}
+
+#header{
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0px;
+    z-index: 1;
+}
+
+
+#header .search-btn {
+    float: right;
+}
+
+#header .search-btn:hover{
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .mobile-menu-icon{
+    color: #000;
+}
+
+#header .search-btn .search-icon, 
+#header .mobile-menu-btn .mobile-menu-icon{
+    color: #fff;
+    line-height: 46px;
+    padding: 0 23px;
+}
+
+#header .mobile-menu-btn {
+    display: none;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+
+#nav > li > a{
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+}
+
+#nav li:hover .subnav{
+    display: block;
+    box-shadow: 0 4px 15px 0 rgb(0 0 0 / 50%);
+}
+
+#nav > li:hover > a, 
+#nav .subnav li:hover a{
+    color: #000;
+    background-color: #ccc;
+    display: block;
+}
+
+#nav .subnav{
+    display: none; 
+    position: absolute;
+    background-color: #fff;
+    list-style-type: none;
+    min-width: 160px;
+    top: 100%;
+    left: 0 ;
+}
+
+#nav .nav-down-arrow{
+    font-size: 12px;
+}
+
+#nav .subnav a{
+    color: #000;
+    padding: 0 16px;
+    line-height: 38.5px;
+}
+
+#slider{
+    position: relative;
+    margin-top: 46.5px;
+    padding-top: 50%;
+    background: url('../img/slider/slider1.jpg') top center /cover no-repeat;
+}
+
+#slider .slider-text{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 32px;
+    color: #fff;
+}
+#slider .slider-text .slider-heading{
+    font-weight: 400;
+}
+#slider .slider-text .slider-sub-heading{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: bolder;
+    font-size: 15px;
+    text-shadow: 0 0 5px #000;
+}
+#content{
+
+}
+#content .text-content{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .content-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    line-height: 1.5;
+    padding: 10px 0;
+}
+#content .content-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    margin: 15px 0;
+    opacity: 0.6;
+}
+#content .about-section{
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: justify;
+}
+#content .about-image{
+    padding: 32px 0;
+}
+#content .about-text-info{
+    font-size: 15px;
+    margin: 15px 0;
+}
+#content .about-image-info{
+    font-size: 15px;
+}
+#content .about-img{
+    width: 154px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+#content .book-ticket{
+    background-color: #000;
+}
+#content .date-book{
+    background-color: #fff;
+    list-style-type: none;
+    margin-top: 40px;
+}
+#content .date-book li{
+    color: rgb(117,  117, 117);
+    font-size: 15px;
+    line-height: 22.5px;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+}
+#content .date-book span{
+    display: inline-block;
+    background-color: red;
+    padding: 0 8px;
+    margin-left: 16px;
+}
+#content .date-book .book-number{
+    float: right;
+    padding: 0 8px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%; 
+    margin-right: 16px;
+}
+#content .ticket-dsc{
+    padding: 32px 0;
+}
+
+#content .img-dsc-ticket{
+    width: 100%;
+}
+
+#content .text-dsc{
+    padding: 0 16px;
+}
+/* Place */
+#content .place-ticket{
+    padding: 16px 0 48px 0;
+}
+
+#content .place-img{
+    width: 100%;
+    display: block;
+}
+
+#content .place-img:hover{
+    opacity: 0.6;
+}
+
+#content .place-text{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+#content .place-header{
+    font-size: 15px;
+    font-weight: 550;
+    margin-bottom: 16px;
+}
+
+#content .place-date{
+    opacity: 0.5;
+    margin-bottom: 16px;
+}
+
+#content .place-tdcs{
+    line-height: 1.4;
+}
+
+#content .buy-ticket-btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+#content .buy-ticket-btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 16px;
+    margin-top: 16px;
+    border: none;
+    font-size: 15px;
+    background-color: #000;
+    color: #fff;
+}
+/* End Place ticket */
+
+/* Begin Image Content */
+.content-image .content-img{
+    width: 100%;
+}
+/* End Image Content */
+
+/* Modal */
+.modal {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-container {
+    position: relative;
+    width: 900px;
+    background: #fff;
+    min-height: 200px;
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #009688;
+    font-size: 30px;
+    color: #fff;
+    padding: 47px 0;
+}
+
+.modal-heading {
+    margin-left: 16px;
+    letter-spacing: 4px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: rgba(255,255,255,0.7);
+    padding: 16px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #fff;
+}
+
+
+.modal-body {
+    padding: 16px;
+    font-size: 15px;
+}
+
+
+.modal-label {
+    display: block;
+}
+
+.modal-input {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding: 12px 8px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+}
+
+.modal-pay {
+    border: none;
+    width: 100%;
+    padding: 16px 0;
+    background: #009688;
+    color: #fff;
+    font-size: 15px;
+}
+
+.modal-pay:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.modal-footer {
+    float: right;
+    padding: 16px;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.modal-help {
+    color: #2196F3;
+}
+
+.modal.open-modal{
+    display: flex;
+}
+
+/* KeyFrame Animation */
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+    /* End Modal */
+
+    /* Contact */
+.contact-form{
+    padding: 32px 0;
+}
+
+.contact-info {
+    font-size: 18px;
+}
+
+.contact-info i[class*="ti-"] {
+    display: inline-block;
+    width: 30px;
+}
+
+.contact-form .contact-info a{
+    color: #0f0bee;
+    opacity: 0.8;
+}
+
+.contact-form .contact-info a:hover{
+    opacity: 1;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    font-size: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact-form .form-control-btn {
+    float: right;
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: 11px 17px;
+    font-size: 15px;
+}
+
+.contact-form .form-control-btn:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+}
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .footer-icon a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #757575;
+}
+
+#footer a:hover {
+    opacity: 0.6;
+}
+
+#footer .copyright-link{
+    margin-top: 15px;
+    font-size: 15px;
+    color: #757575;
+}
+
+#footer .copyright-link a{
+    color: #757575;
+}
